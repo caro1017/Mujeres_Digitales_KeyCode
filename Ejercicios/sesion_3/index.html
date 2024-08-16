@@ -7,16 +7,18 @@
     <!-- Estilos -->
     <style>
       body {
-        background-color: lightslategrey;
+        background-color: rgb(31, 37, 43);
         color: white;
         margin: 5rem;
         letter-spacing: 1px;
       }
+
       .parrafo1 {
         font-size: 25px;
         color: lightsalmon;
-        font-weight: bold;
+        font-weight: 500;
       }
+
       button {
         padding: 1rem;
         border-radius: 1rem;
@@ -24,6 +26,7 @@
         background-color: lightsalmon;
         border: none;
         color: white;
+        font-weight: 500;        
       }
     </style>
   </head>
@@ -46,7 +49,7 @@
       const parrafo = document.getElementById("miParrafo");
       /* Definir el nuevo texto */
       const textoParrafo = "Hacer Deporte";
-      const textoBoton = "¡Mi Hobbie es !";
+      const textoBoton = "¡ Mi Hobbie es !";
       /* Definir el evento del botón */
       boton.addEventListener("click", function () {
         parrafo.innerHTML = textoParrafo;
@@ -56,6 +59,8 @@
         parrafo.style.fontSize = "30px";
 
         boton.style.backgroundColor = "lightpink";
+        boton.style.color = "rgb(31, 37, 43)";
+
       });
     </script>
   </body>
