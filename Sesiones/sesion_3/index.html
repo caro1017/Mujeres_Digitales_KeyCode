@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <!-- Estilos -->
+    <style>
+      body {
+        background-color: rgb(31, 37, 43);
+        color: white;
+        margin: 5rem;
+        letter-spacing: 1px;
+      }
+
+      .parrafo1 {
+        font-size: 25px;
+        color: lightsalmon;
+        font-weight: 500;
+      }
+
+      button {
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: 20px;
+        background-color: lightsalmon;
+        border: none;
+        color: white;
+        font-weight: 500;        
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <h1>Manipulación del DOM con JS</h1>
+      <p id="miParrafo" class="parrafo1">Este es el texto original</p>
+    </header>
+
+    <!-- Seccion -->
+    <section>
+      <button id="miBoton">Haz click en mi !</button>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+      /* Llamar los Id del HTML */
+      const boton = document.getElementById("miBoton");
+      const parrafo = document.getElementById("miParrafo");
+      /* Definir el nuevo texto */
+      const textoParrafo = "Hacer Deporte";
+      const textoBoton = "¡ Mi Hobbie es !";
+      /* Definir el evento del botón */
+      boton.addEventListener("click", function () {
+        parrafo.innerHTML = textoParrafo;
+        boton.innerHTML = textoBoton;
+
+        parrafo.style.color = "lightpink";
+        parrafo.style.fontSize = "30px";
+
+        boton.style.backgroundColor = "lightpink";
+        boton.style.color = "rgb(31, 37, 43)";
+
+      });
+    </script>
+  </body>
+</html>
